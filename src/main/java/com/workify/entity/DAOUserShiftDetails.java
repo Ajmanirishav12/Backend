@@ -1,0 +1,147 @@
+package com.workify.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "user_shift_details")
+public class DAOUserShiftDetails {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "user_shift_id")
+	private Integer usershiftId;
+
+	@Column(name = "attendance_id")
+	private Integer attendanceId;
+
+	@Column(name = "org_id")
+	private Integer orgId;
+
+	@Column(name = "user_id")
+	private Integer userId;
+	
+	
+	@Column(name = "emp_code")
+	private String empCode;
+
+
+	@Column(name = "exp_in")
+	@Temporal(TemporalType.TIME)
+	private java.util.Date expIn;
+
+	@Column(name = "exp_out")
+	@Temporal(TemporalType.TIME)
+	private java.util.Date expOut;
+
+	@Column(name = "creation_date")
+	@Temporal(TemporalType.DATE)
+	private Date creationDate;
+
+	@Column(name = "modified_date")
+	@Temporal(TemporalType.DATE)
+	private Date modifiedDate;
+
+	@Column(name = "created_by")
+	private Integer createdBy;
+
+	@Column(name = "modified_by")
+	private Integer modifiedBy;
+
+	public Integer getUsershiftId() {
+		return usershiftId;
+	}
+
+	public void setUsershiftId(Integer usershiftId) {
+		this.usershiftId = usershiftId;
+	}
+
+	public Integer getAttendanceId() {
+		return attendanceId;
+	}
+
+	public void setAttendanceId(Integer attendanceId) {
+		this.attendanceId = attendanceId;
+	}
+
+	public Integer getOrgId() {
+		return orgId;
+	}
+
+	public void setOrgId(Integer orgId) {
+		this.orgId = orgId;
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	
+	public String getEmpCode() {
+		return empCode;
+	}
+
+	public void setEmpCode(String empCode) {
+		this.empCode = empCode;
+	}
+
+	public java.util.Date getExpIn() {
+		return expIn;
+	}
+
+	public void setExpIn(java.util.Date expIn) {
+		this.expIn = expIn;
+	}
+
+	public java.util.Date getExpOut() {
+		return expOut;
+	}
+
+	public void setExpOut(java.util.Date expOut) {
+		this.expOut = expOut;
+	}
+
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
+
+	public Date getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
+
+	public Integer getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(Integer createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Integer getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(Integer modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+
+}
